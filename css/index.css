@@ -1,0 +1,623 @@
+@charset "utf-8";
+/* CSS Document */
+
+	html, body, ul, li, h2, form, input, dl, dt, dd {
+	 margin: 0;
+	 padding: 0; 
+	}
+	html { 
+		overflow-y: auto; 
+	}
+	body { 
+		font-family: Arial,'Microsoft YaHei',SimSun; 
+	}
+	ul { 
+		list-style: none;
+		 }
+	input, textarea, a { 
+		outline: none; 
+	}
+	img { 
+		border: none;
+		 }
+	.clearFix:after { 
+		content: ""; 
+		display: block;
+		overflow: hidden;
+		clear: both;
+		   }
+	a { 
+		text-decoration: none; 
+	}
+	.disnone { 
+		display: none;
+		 }
+
+
+
+		 /*登录页logo及导航*/
+	a.go_logo {
+		 	display: inline-block;
+		    padding-top: 32px;
+	   }
+	.sg_nav {
+			float: right;
+			margin-top: 56px;
+		   }
+	.sg_nav li {
+			float: left;
+		    padding: 0 16px; 
+	}
+	.sg_nav li span { 
+			display: none;
+		 }
+	.sg_nav li.nav_cur span { 
+			display: block;
+			padding: 0 10px; 
+			border-bottom: 3px solid #f60; 
+		}
+	.sg_nav li.nav_cur a, .sg_nav li a:hover {
+	        color: #f60;
+	  }
+	.sg_nav li a { 
+			display: block; 
+			padding: 0 12px 11px;
+			font-weight: bold; 
+			color: #444; 
+			font-size: 16px; 
+		}
+	.sg_header { 
+			height: 90px;
+			background: #fff; padding-bottom: 5px;
+			background: url(/Content/login/image/sg_mainbg.png) 0 90px repeat-x;
+	   }
+	.menu_wrap { 
+			width: 1000px;
+		    margin: 0 auto; 
+	}
+
+
+	/*登录框*/
+	.sg_f_wrap {
+			position: relative;
+			width: 1000px; margin: 0 auto; 
+			z-index: 2;
+	   }
+	.boxopacity {
+			position: absolute; 
+			right: 15px; top: 40px;
+			background: rgba(255,255,255,.9);
+		    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#D9FFFFFF,endColorstr=#D9FFFFFF);
+		   }
+	.sg_f_box {
+			position: relative;
+			width: 300px; 
+			padding-bottom: 10px;
+	   }
+
+
+	/*登录选项*/
+	.sg_f_box h2 {
+			height: 40px; 
+			padding: 16px 0 0 13px;
+			margin-bottom: 8px; 
+			border-bottom: 1px solid #ddd; 
+			z-index: 2;
+	}
+	.sg_f_box h2 a { 
+			display: block; 
+			float: left; 
+			padding: 10px 0; 
+			text-align: center; 
+			width: 90px; color: #999;
+			font-size: 15px; 
+		}
+	.sg_f_box h2 a.sign_cur, .sg_f_box h2 a:hover {
+	 		color: #ff8000; 
+	}
+
+
+	/*登录页错误提示内容*/
+	.errorbox { 
+			margin: 0 39px 14px 0px;
+			padding: 6px 5px;
+			font-size: 12px; 
+			color: #f00; 
+			border: 1px solid #f99; 
+			background: #fff2ee; 
+			display: none;
+		   }
+
+
+	/*登录表单常规*/
+	.formbox { 
+			padding: 8px 0 0 30px; 
+			position: relative;
+	}
+	 .aa{
+        	width: 300px;
+        	height: 185px;
+        	position: absolute;
+        	left: 0;
+        	top: 0;
+        	background: white;
+        	z-index: 10;
+        	display: none;
+        }
+	    .aa form input{
+	    	width: 230px;
+	    	height: 35px;
+	    	border: 2px solid  #F0F8FF ;
+	    	margin-top: 10px;
+	    	margin-left: 32px;
+	    	box-shadow: -1px -1px -1px white;
+
+	    }
+        .bb{
+        	width: 300px;
+        	height: 185px;
+        	position: absolute;
+        	left: 0;
+        	top: 0;
+        	background:white;
+        	z-index: 5;
+        	display: none;
+        }
+        .bb form input{
+	    	width: 230px;
+	    	height: 35px;
+	    	border: 2px solid  #F0F8FF ;
+	    	margin-top: 10px;
+	    	margin-left: 32px;
+	    	box-shadow: -1px -1px -1px white;
+
+	    }
+	.box_sj { 
+			display: none; 
+	}
+	.box_qks { 
+			display: none;
+	}
+	#form_ewm {
+	 		position: relative; 
+	}
+	.formbox .d_item {
+	 		position: relative;
+	  		margin-bottom: 14px;
+	   }
+	.formbox #js_ewm_box {
+	 		padding: 0 0 0 11%;
+	  		width: 89%; 
+	}
+	.formbox .ewmOverDue_box {
+			display: none; 
+			margin: 0px; 
+			height: 177px; 
+			left: 30px; 
+			position: absolute;
+		    top: 0; 
+			width: 177px; }
+	.formbox .ewmOverDue_box p {
+	 		margin: 0px; 
+	}
+	.formbox .ewmOverDue {
+			background: #000 none repeat scroll 0 0;
+			height: 177px; 
+			left: 0; 
+			opacity: 0.5;
+			filter: alpha(opacity=50);
+			position: absolute; 
+			top: 0;
+			width: 177px; 
+	 }
+	.formbox .ewmtxt { 
+			color: #fff; 
+			cursor: pointer;
+			font-size: 16px; 
+			font-weight: bold;
+			height: 112px; 
+			left: 0; 
+			padding-top: 60px;
+			position: absolute; 
+			text-align: center; 
+			top: 0; 
+			width: 177px; 
+		}
+	.formbox .d_itemapp {
+			position: relative; 
+			margin-bottom: 14px;
+			font-size: 12px; 
+	}
+	.formbox .d_iptw { 
+			width: 232px; 
+			height: 37px; 
+			background: url(/Content/login/image/sg_mainbg.png) 0 -7px no-repeat; 
+	}
+	.formbox .d_iptw input, .formbox .d_iptcodew input { 
+			width: 214px; 
+			height: 23px; 
+			line-height: 20px; 
+			padding: 6px 8px; 
+			border: none; 
+			background: none; 
+			font-size: 20px;
+			letter-spacing: 1px; 
+			color: #222;
+		  }
+	div.formbox .d_iptcodew .d_iptw {
+			width: 112px; 
+			background-position: 0 -164px;
+	  }
+	div.formbox .d_iptcodew input {
+	 		width: 95px; 
+	}
+
+
+	/*登录表单聚焦*/
+	.formbox div.d_iptw_foc { 
+			background-position: 0 -46px;
+		 }
+	div.formbox .d_iptcodew div.d_iptw_foc { 
+			background-position: 0 -203px; 
+	}
+
+
+	/*登录表单填写错误*/
+	.formbox div.d_iptw_err { 
+			background-position: 0 -484px; 
+	}
+	div.formbox .d_iptcodew div.d_iptw_err { 
+			background-position: 0 -436px;
+		 }
+
+
+	/*登录表单验证码*/
+	.formbox .ckcode {
+			 display: block; 
+			 position: absolute; 
+			 right: 38px; top: 0; 
+	}
+	.formbox .ckcode img {
+	 		width: 110px; height: 40px; 
+	}
+	.formbox .btn_sign { 
+			display: block;
+		 	width: 232px; 
+		 	height: 37px; 
+		 	background: url(/Content/login/image/sg_mainbg.png) 0 -86px no-repeat; 
+		}
+	.formbox .btn_sign input { 
+			border: none; 
+			background: none;
+		 	width: 232px; 
+		 	height: 37px;
+		  	font-size: 16px; 
+		  	color: #fff; 
+		  	font-weight: bold;
+		   	cursor: pointer;
+		    }
+	.formbox .btn_sign:hover, .formbox .btn_sign:active {
+	 		background-position: 0 -125px; 
+	}
+
+
+	/*登录表单手机验证码*/
+	div.formbox .box_sj .d_iptcodew .getmobcode {
+	 		position: absolute;
+	  		right: 38px;
+	  	 	top: 0; 
+	   		width: 122px; 
+	   		height: 37px;
+	    	background: url(/Content/login/image/sg_mainbg.png) 0 -522px no-repeat; 
+	    	font-size: 14px;
+	     	color: #fff; 
+	     	font-weight: bold; 
+	     	cursor: pointer; 
+	 }
+	div.formbox .box_sj .d_iptcodew input.disb { 
+			background-position: 0 -379px;
+		 	color: #aaa; 
+		 	cursor: not-allowed;
+		  }
+	.formbox .tip_word { 
+			position: absolute; 
+			top: 11px; 
+			left: 12px; 
+			color: #c2c2c2;
+		 	font-size: 14px;
+		  }
+
+
+	/*登录页快捷链接*/
+	.quicklink { 
+			text-align: right;
+		 	margin: 20px 8px 0 0;
+		  	cursor: default;
+		   }
+	.quicklink, .quicklink a { 
+			color: #aaa;
+		 	font-size: 12px;
+		  	padding: 0 3px;
+		   }
+	.quicklink a:hover {
+	 		color: #1492dc;
+	  }
+
+
+	/*登录页焦点图*/
+	.sg_focus { 
+			height: 490px; 
+			background-image: url(img/1.jpg);
+	}
+	.sg_focus ul {
+	 		position: relative; 
+	 		z-index: 1; 
+	}
+	.sg_focus li { 
+			display: none; 
+			position: absolute;
+		 	top: 0;
+		 	left: 0; 
+		 	width: 100%; 
+		 	height: 480px; 
+		}
+	.sg_focus li .div_focbg {
+	 		width: 100%;
+	 	 	height: 480px; 
+	  		background-position: top center;
+	   		background-repeat: no-repeat;
+	    	min-width: 1000px;
+	     }
+	.sg_focus li .div_focbg a { 
+			display: block; 
+			width: 100%; 
+			height: 100%;
+		 }
+
+
+	/*登录页焦点图小点*/
+	.focsel { 
+			width: 1000px;
+		 	margin: 0 auto; 
+		 	text-align: center; 
+		 	cursor: default; 
+		}
+	.focsel a { 
+			display: inline-block;
+		 	width: 16px; 
+		 	height: 16px;
+		  	padding: 3px; 
+		  	background: url(/Content/login/image/sg_mainbg.png) -3px -256px no-repeat;
+		   }
+	.focsel a.current {
+	 		background-position: -72px -256px; 
+	}
+
+
+/*引入轮播图样式*/
+	.slider{ width:100%; margin:0 auto;  position:relative; overflow:hidden;   height:480px;; background:#000;  }
+	.slider .bd{ position:relative; z-index:0;  }
+	.slider .bd li{ height:480px; overflow:hidden; }
+	.slider .bd li img{ display:block; width: 100%; height: 480px; text-align: center;}
+
+	.slider .hd{ width:100%;  position:absolute; z-index:1; bottom:0; left:0; height:30px; line-height:30px; }
+	.slider .hd ul{ text-align:center;  }
+	.slider .hd ul li{ cursor:pointer; display:inline-block; *display:inline; zoom:1; width:9px; height:9px; margin:0 4px; 
+		background:url(images/dot.png) 0 -16px;
+		overflow:hidden;  filter:alpha(opacity=70);opacity:0.7;  vertical-align:top; line-height:9999px; 
+	}
+	.slider .hd ul .on{ background-position:0 0;  }
+	.slider .timer{ position:absolute; z-index:1; left:0; bottom:0; height:4px; width:0; background:#000; filter:alpha(opacity=40);opacity:0.4; font-size:0; overflow:hidden;   }
+
+
+
+
+
+	/*登录页底部导航*/
+	.sg_ad { 
+		width: 1000px;
+		margin: 15px auto;
+		  }
+	.sg_ad li { 
+		float: left; 
+		width: 330px; 
+		cursor: default;
+		 }
+	.sg_ad dl { 
+		padding-left: 62px;
+		height: 50px; 
+		background: url(img/sg_mainbg.png) -175px -164px no-repeat; 
+		}
+	.sg_ad dl.sg_camp {
+	 	background-position: -175px -268px; 
+	}
+	.sg_ad dl.sg_notice { 
+		background-position: -175px -372px; 
+	}
+	.sg_ad dt { 
+		margin-bottom: 6px;
+		font-size: 20px; 
+		font-weight: bold; 
+		color: #888; 
+		}
+	.sg_ad dd, .sg_ad dd a { 
+		font-size: 12px; 
+		color: #777; 
+	}
+	.sg_ad dd a:hover { 
+		color: #1492dc; 
+	}
+	.sg_ad li.ad_cur dl {
+	 	background-position: -175px -216px; 
+	}
+	.sg_ad li.ad_cur dl.sg_camp { 
+		background-position: -175px -320px;
+		 }
+	.sg_ad li.ad_cur dl.sg_notice { 
+		background-position: -175px -535px; 
+	}
+
+
+	.footer { 
+		height: 153px; 
+		background-color: #fff; 
+		text-align: center; 
+		line-height: 24px; 
+	}
+	.foot { 
+		position:relative;
+		width:1000px;
+		margin:0 auto;
+		padding-bottom:31px;
+		font-size:12px;
+		line-height:22px;
+		overflow: hidden;
+	}
+	.foot .fleft {
+		float:left;
+		width:70px;
+		height:70px;
+		padding:46px 0 0 148px;
+	}
+	.foot .fleft a{
+		float:left;
+		display: block;
+		width:70px;
+		height:70px;
+		margin-right:13px;
+	}
+	.foot .ftxt {
+		width:800px;
+		text-align:center;
+		overflow: hidden;
+		margin:0 auto; 
+		float: none;
+	}
+	.foot .ftxt p{
+		display: inline-block;*display:inline;*zoom:1;
+		margin: 0 10px 0 0;
+	}
+	.foot .f01{
+		color:#666666;
+	}
+	.foot .f02{ 
+		color:#999999;
+	}
+	.foot .ftxt p.f02{
+		display:block
+	}
+	.foot .ftxt a{
+		color:#666666;
+	}
+	.foot .fright{
+		float: right;
+		width: 128px;
+		height: 39px;
+		margin-top: -84px;
+	}
+	.gy_fNav{
+		padding: 24px 0 10px 0px; 
+		 color: #bebebe;
+		}
+	.gy_fNav a{ 
+		padding: 0 16px; 
+		color: #232323;
+	}
+	.gy_fNav a:hover{ 
+		color: #298d85; 
+		text-decoration:none;
+	}
+
+
+ /*复制进来的*/
+
+
+ 	.tu{
+ 		margin-top: 100px;
+ 	}
+	 .slideBox {
+            width:100%;
+            height:480px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+        .slideBox .hd {
+            height: 15px;
+            overflow: hidden;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            z-index: 1;
+        }
+        .slideBox .hd ul {
+            overflow: hidden;
+            zoom: 1;
+            float: left;
+        }
+        .slideBox .hd ul li {
+            float: left;
+            margin-right: 2px;
+            width: 15px;
+            height: 15px;
+            line-height: 14px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+        }
+        .slideBox .hd ul li.on {
+            background: #f00;
+            color: #fff;
+        }
+        .slideBox .bd {
+            position: relative;
+            height: 100%;
+            z-index: 0;
+        }
+        .slideBox .bd li {
+            zoom: 1;
+            vertical-align: middle;
+        }
+        .slideBox .bd img {
+            width:100%;
+            height: 480px;
+            display: block;
+        }
+        /* 下面是前/后按钮代码，如果不需要删除即可 */
+        .slideBox .prev,
+        .slideBox .next {
+            position: absolute;
+            left: 3%;
+            top: 50%;
+            margin-top: -25px;
+            display: block;
+            width: 32px;
+            height: 40px;
+            background: url(images/slider-arrow.png) -110px 5px no-repeat;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+        .slideBox .next {
+            left: auto;
+            right: 3%;
+            background-position: 8px 5px;
+        }
+        .slideBox .prev:hover,
+        .slideBox .next:hover {
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        .slideBox .prevStop {
+            display: none;
+        }
+        .slideBox .nextStop {
+            display: none;
+        }	
+
+
+
+
+
+
+
+        

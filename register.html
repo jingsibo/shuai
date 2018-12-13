@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>光宇用户注册-光宇游戏</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index4.css">
+	</head>
+	<body>
+	<header>
+		<div class="top_bg">
+			<div class="top_body_bg">
+				<div class="top_red">
+					<div class="top_logo">
+						<a href="http://www.gyyx.cn/" target="_blank"><img src="img/toplogo_201612.jpg"></a>
+					</div>
+					<div class="top_comm_menu">
+						<a href="http://www.gyyx.cn/" class="js_gamelink">首页</a>
+					</div>
+					<div class="top_info_menu ">
+						<div class="info_mli js_customer">
+							<a class="icon_customer">游戏服务</a>
+						</div>
+						<span class="js_pubtoplogin_div" id="js_pubtoplogin_div">
+							<div class="info_mli info_mli_lore">
+								<a href="index.html" class="info_mli_a js_alertlogin_a no_lo_a">登录</a>
+							</div>
+							<div class="info_mli_lore_line">|</div>
+							<div class="info_mli info_mli_lore">
+								<a class="info_mli_a no_lo_a" href="http://account.gyyx.cn/Member/Register" target="_blank">注册</a>
+							</div>
+						</span>
+					</div>
+					<div class="top_game_menu">
+						<div class="menu_li"><a href="#" class="menu_li_a">大型游戏</a></div>
+						<div class="menu_li"><a href="#" class="menu_li_a">网页游戏</a></div>
+						<div class="menu_li"><a href="#" class="menu_li_a">手机游戏</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<div class="bigbox" style="margin: 0 auto;">
+			<div class="logo">
+				<!-- <img src="img/uplay-logo-black.png"> -->
+			</div>
+			<div class="logoa">
+				<h2>创建一个 光宇 账号吧</h2>
+			</div>
+			<form action="php/ajaxlianxi.php" method="post">
+				<span>邮箱:</span><br/>
+					<input id="email" class="kuangkuang" type="text" name="email" oninput="emailyza()"><br/>
+					<span id="emailfk" class="tishi"></span><br>
+					
+				<span>密码:</span><br/>
+					<input id="mima" class="kuangkuang" type="password" name="password" oninput="mimayza()"><br/>
+					<span id="mimafk" class="tishi"></span><br>
+				<span>社区账号:</span><br/>
+					<input id="yhm" class="kuangkuang" type="text" name="name" oninput="yhmyza()"><br/>
+					<span id="yhmfk" class="tishi"></span><br>
+					
+					<br />
+				
+				<div class="tiaokuan1">
+					<input type="checkbox" name="" required>我接受光宇的<a class="tiaokuan2" href="#">使用条款,销售条款和隐私政策.</a>
+				</div>
+				<div>
+					<input type="checkbox" name="" required><a class="tiaokuan2" href="#">与指定第三方分享我的资讯.</a>
+				</div>
+				<input class="chuangjian" value="创建 光宇 账号" type="submit" name="">
+				<a class="quxiao" href="logIn.html">取消</a>
+			</form>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/gg.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript">
+	$("#yhm").onblur=function(){
+	let yhm=this.value;
+	var regName=/^[a-z0-9_-]{3,16}$/;
+	if(yhm.length>=8){
+		$("#yhmfk").innerHTML="提示:用户名过长！";	
+	}else{
+		isRight=true;
+	}
+	if(regName.test(yhm)){
+		$("#yhmfk").style.color="green";
+		$("#yhmfk").innerHTML="用户名正确，请继续";	
+		
+	}else{
+		$("#yhmfk").innerHTML="提示:用户名格式错误";	
+	}
+}
+
+
+$("#mima").onblur=function(){
+	let mima=this.value;
+	var regmima=/^[a-z0-9_-]{6,18}$/;
+	if(mima.length<8||mima.length>16){
+		$("#mimafk").innerHTML="提示:请输入8~16位的密码";
+	}
+	if(regmima.test(mima)){
+		$("#mimafk").style.color="green";
+		$("#mimafk").innerHTML="密码格式正确，请继续";
+	}else{
+		$("#mimafk").innerHTML="提示:密码格式不正确";
+	}
+}
+
+$("#email").onblur=function(){
+	let email=this.value;
+	var reg1 = /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+	if(email.length<8||email.length>16){
+		$("#emailfk").innerHTML="提示:请输入正确的邮箱";
+	}
+	if(reg1.test(email)){
+		$("#emailfk").style.color="green";
+		$("#emailfk").innerHTML="邮箱格式正确，请继续";
+	}else{
+		$("#emailfk").innerHTML="提示:邮箱格式不正确";
+	}
+}
+</script>

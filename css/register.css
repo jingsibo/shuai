@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+ul,li{
+	list-style:none;
+}
+.bigbox{
+	padding:0 13px;
+	text-align: center;
+}
+.logo{
+	width:125px;
+	height:55px;
+	margin:30px auto 46px auto;
+	text-align: center;
+}
+.logoa{
+
+	margin-bottom:26px;
+}
+.logoa h2{
+	font-weight:lighter;
+	font-size: 26px;	
+
+}
+form span{
+	display:inline-block;
+	font-size: 13px;
+	color:#616161;
+	margin-bottom: 5px;
+}
+.kuangkuang{
+	width:359px;
+	height:30px;
+	border:1px solid #cccccc;
+	margin-bottom: 13px;
+}
+.riqi{
+	width:109px;
+	height:33px;
+}
+.tiaokuan1{
+	font-size: 13px;
+	color:#616161;
+	margin-top:15px;
+}
+.tiaokuan2{
+	font-size: 13px;
+	color:#004b98;
+}
+.chuangjian{
+	width:145px;
+	height:33px;
+	background:#7396ce;
+	border:1px solid #6088c7;
+	color:#fff;
+	font-weight: 666;
+	margin-top:15px;
+}
+.quxiao{
+	margin-top:25px;
+	font-size: 12px;
+	color: #004b98;
+	float:right;
+	font-weight: 666;
+}
+.tishi{
+	margin-top:0px;
+	color:red;
+}

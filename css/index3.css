@@ -1,0 +1,181 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+	background: #f2f2f2;
+
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+img{
+	border: none;
+}
+
+/*header*/
+
+	header{
+		height: 40px;
+		background: #333;
+	}
+	.header{
+		height: 40px;
+		width: 1000px;
+		margin:0 auto;
+	}
+	.h_left{
+		
+		float: left;
+		
+	}
+	
+	.h_left a{
+		color: #cbcbcb;
+		display: inline-block;
+		padding: 10px 13px;
+		font-size: 12px;
+	}
+
+	/*大背景那里*/
+	.top{
+		height: 153px;
+		background: url(../img/topbg.jpg) no-repeat center center;
+	}
+	.top .toplm{
+		height: 153px;
+		width: 1000px;
+    	margin: 0 auto;
+	}
+	.top .logoyi{
+	    height: 147px;
+	    width: 309px;
+	    display: block;
+	    float: left;
+	    position: relative;
+	}
+	.top .top_title {
+	    padding: 0;
+	    width: auto;
+	    display: inline-block;
+	    color: #fff;
+	    font-size: 14px;
+	    position: absolute;
+	    right: 41px;
+	    top: 92px;
+	}
+
+
+	.nav {
+	    margin-top: 8px;
+	    height: 40px;
+	    background: url(../img/qbz_navrep.gif);
+	}
+	.nav ul {
+		height: 40px;
+	    width: 1000px;
+	    margin: 0 auto;
+	    background: url(../img/qbz_navbg.jpg) no-repeat;
+	}
+	.nav ul li{
+		
+		float: left;
+	    width: 157px;
+	    margin-left: 1px;
+	    line-height: 40px;
+	    font-size: 16px;
+	}
+
+	.nav ul li.on3 {
+    	width: 173px;
+	}
+	.nav ul li.on6 {
+	    width: 192px;
+	}
+
+	.nav ul li.on a.a01 {
+	    background: url(../images/qbz_navbg.jpg) 0 -40px no-repeat;
+	}
+	.nav ul li.on a {
+	    color: #fff;
+	}
+	.nav ul li a {
+	    padding-left: 35px;
+	    display: block;
+	    height: 40px;
+	    color: #daebea;
+	    text-align: center;
+	}
+
+
+
+	/*
+	.slideTxtBox{ width:1000px; border:1px solid #ddd; text-align:left;margin: 0 auto;  }
+		.slideTxtBox .hd{ height:30px; line-height:30px; background:#f4f4f4; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+		.slideTxtBox .hd ul{ float:left;  position:absolute; left:20px; top:-1px; height:32px;   }
+		.slideTxtBox .hd ul li{ float:left; padding:0 35px; cursor:pointer;  }
+		.slideTxtBox .hd ul li.on{ height:30px;  background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; }
+		.slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+		.slideTxtBox .bd li{ height:24px; line-height:24px;   }
+		.slideTxtBox .bd li .date{ float:right; color:#999;  }*/
+
+	
+	.main {
+	    position: relative;
+	    width: 1000px;
+	    margin: 0 auto;
+	    zoom: 1;
+	    padding-bottom: 40px;
+	}
+	.mbx {
+	    margin-top: 15px;
+	    height: 40px;
+	    line-height: 40px;
+	    font-size: 14px;
+	    color: #999;
+	}
+	.mbx a {
+	    padding: 0 5px;
+	    color: #999;
+	}
+
+	.con {
+	    padding: 0 1px;
+	    font-size: 14px;
+	    color: #666;
+	}
+	.qbz_left {
+	    float: left;
+	    width: 242px;
+	    background: #f7f7f7;
+	}
+	.snav01 {
+	    overflow: hidden;
+	}
+	.snav01 li.li01 {
+	    line-height: 34px;
+	}
+	.qbz_right {
+	    float: left;
+	    width: 672px;
+	    padding: 30px 40px;
+	    line-height: 26px;
+	    background: #f9f9f9;
+	    min-height: 600px;
+	    _height: 600px;
+	}
+	.con {
+	    padding: 0 1px;
+	    font-size: 14px;
+	    color: #666;
+	}	
+	.qbz_right p {
+	    padding-bottom: 15px;
+	}
+	strong, b {
+	    font-weight: bold;
+	}

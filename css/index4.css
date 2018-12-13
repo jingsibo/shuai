@@ -1,0 +1,137 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+	background: #f2f2f2;
+
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+img{
+	border: none;
+}
+
+
+/*导航栏*/
+	
+	header{
+		min-width: 1000px;
+	}
+	header .top_bg {
+		height: auto;
+	    background: url(../img/topbgny_201612.jpg) center top repeat-x;
+	    position: relative;
+		}
+	header .top_red{
+		width: 1000px;
+	    height: 45px;
+	    margin: 0 auto;
+	    position: relative;
+	  
+	}
+	header .top_logo {
+	    position: absolute;
+	    width: 151px;
+	    left: 0px;
+	}
+	header .top_comm_menu {
+	    float: left;
+	    width: 67px;
+	    height: 45px;
+	    margin-left: 154px;
+	    padding-left: 11px;
+	    padding-right: 15px;
+	}
+	header .top_comm_menu a {
+	    font-family: 微软雅黑;
+	    font-size: 16px;
+	    display: inline-block;
+	    text-align: center;
+	    line-height: 45px;
+	    color: rgb(255, 236, 236);
+	    letter-spacing: 2px;
+	    padding: 0px 15px;
+	}
+	header .top_info_menu {
+	    color: #fff;
+	    float: right;
+	}
+	header .top_info_menu .info_mli {
+	    float: left;
+	    padding-left: 10px;
+	    position: relative;
+	    height: 44px;
+	}
+	header .top_info_menu .icon_customer {
+	    display: inline-block;
+	    background: url(../img/pub_201612.png) no-repeat top left;
+	    width: 96px;
+	    position: relative;
+	    top: 10px;
+	    height: 25px;
+	    line-height: 25px;
+	    font-size: 14px;
+	    color: #333333;
+	    text-indent: 13px;
+	}
+	.js_pubtoplogin_div {
+	    margin-left: 19px;
+	    float: left;
+	    line-height: 44px;
+	}
+	header .top_info_menu .info_mli {
+	    float: left;
+	    padding-left: 10px;
+	    position: relative;
+	    height: 44px;
+	}
+	header .top_info_menu .no_lo_a {
+	    color: #d1d0d0;
+	    text-decoration: none;
+	}
+	.info_mli_lore_line {
+	    float: left;
+	    width: 1px;
+	    height: 45px;
+	    text-align: center;
+	    line-height: 45px;
+	    font-size: 12px;
+	    font-weight: 100;
+	    color: #b86b6b;
+	    margin: 0 3px 0 9px;
+	}
+	header .top_info_menu .info_mli {
+	    float: left;
+	    padding-left: 10px;
+	    position: relative;
+	    height: 44px;
+	}
+	header .top_info_menu .no_lo_a {
+	    color: #d1d0d0;
+	    text-decoration: none;
+	}
+	header .top_game_menu {
+	    float: left;
+	    width: auto;
+	    height: 45px;
+	}
+	header .top_game_menu .menu_li {
+	    float: left;
+	    position: relative;
+	}
+	header .top_game_menu .menu_li .menu_li_a {
+	    display: inline-block;
+	    color: rgb(255, 153, 153);
+	    font-size: 14px;
+	    cursor: pointer;
+	    line-height: 45px;
+	    height: 45px;
+	    font-family: "Microsoft Yahei", 微软雅黑;
+	    padding: 0px 26px 0px 18px;
+	}
